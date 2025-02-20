@@ -53,7 +53,6 @@ export type StorageState = {
   menuLinks: { name: string; source: string }[]
   socialLinks: string[]
   addressesOfTokenLists: string[]
-  disableSourceCopyright: boolean
   defaultSwapCurrency: { input: string; output: string }
   onoutFeeTo: string
   additions: Partial<
@@ -87,7 +86,6 @@ const initialState: ApplicationState = {
   allFeeToProtocol: undefined,
   possibleProtocolPercent: [],
   totalSwaps: undefined,
-  disableSourceCopyright: false,
   domain: '',
   projectName: '',
   brandColor: '',

@@ -46,7 +46,6 @@ const defaultSettings = (): StorageState => ({
   menuLinks: [],
   socialLinks: [],
   addressesOfTokenLists: [],
-  disableSourceCopyright: false,
   defaultSwapCurrency: { input: '', output: '' },
   onoutFeeTo: '',
   additions: {},
@@ -89,7 +88,6 @@ const parseSettings = (settings: string, chainId: number, owner: string, wpVersi
       socialLinks,
       tokenLists,
       addressesOfTokenLists,
-      disableSourceCopyright,
       defaultSwapCurrency,
       additions,
     } = parsedSettings
@@ -117,7 +115,6 @@ const parseSettings = (settings: string, chainId: number, owner: string, wpVersi
     if (backgroundUrl) appSettings.background = backgroundUrl
     if (logoUrl) appSettings.logo = logoUrl
     if (faviconUrl) appSettings.favicon = faviconUrl
-    if (disableSourceCopyright) appSettings.disableSourceCopyright = disableSourceCopyright
 
     if (validArray(navigationLinks)) appSettings.navigationLinks = navigationLinks
     if (validArray(menuLinks)) appSettings.menuLinks = menuLinks

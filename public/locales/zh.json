@@ -288,12 +288,10 @@
   "confirmPaymentTransaction": "确认付款交易",
   "saveYourAdditionKey": "保存您的附加密钥",
   "buy": "购买",
-  "noticeAboutOnoutFee": "请注意，{{onoutFee}}onout.org 费用将从管理员的费用中扣除(您将得到{{adminFee}}). 但是，您可以购买高级版本来禁用onout.org 免费。",
   "getAbilityToRemoveCopyrightOf": "获得删除版权的选项",
   "removeCopyrightOf": "删除",
   "buyPremium": "购买保费",
   "purchased": "购买",
-  "disableSourceCopyright": "禁用Onout 版权",
   "reset": "重置",
   "onoutFeeIsDisabled": "Onout 饲料被禁用",
   "doNotForgetDisableOnoutFee": "不要忘记禁用onout 购买高级版本后的费用",
@@ -305,8 +303,6 @@
   "saveDataForNewDomain": "为一个新的域保存数据",
   "deleteDataForOldDomain": "删除旧域名的数据",
   "deleteTokenList": "删除令牌列表",
-  "questionWhyToSwitchToStorageNetwork": "Q: 我正在部署到一个非BSC网络，但应用程序提示BSC。为什么？",
-  "answerWhyToSwitchToStorageNetwork": "A: 应用程序使用BSC作为一个临时数据库。部署合约后，您必须将设置保存到这个存储中，这就是为什么您需要使用两个网络的原因。",
   "descriptionAboutStorageNetworkUsage": "存储网络用于存储应用数据，如智能合约、颜色、代币列表等。如果你看到切换网络的请求，很可能是需要切换到存储网络，这样你就可以保存你的数据。出于安全考虑，我们不使用集中式服务器。",
   "ifYouAlreadyHaveFactorySpecifyIt": "如果您已经有工厂合同，请在下面使用它以避免创建新合同"
 }

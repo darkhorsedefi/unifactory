@@ -295,12 +295,10 @@
   "confirmPaymentTransaction": "Confirm the payment transaction",
   "saveYourAdditionKey": "Save your add-on key",
   "buy": "Buy",
-  "noticeAboutOnoutFee": "Please note that a {{onoutFee}} onout.org fee will be deducted from the admin's fee (you will get {{adminFee}}). However, you can purchase a premium version to disable the onout.org fee.",
   "getAbilityToRemoveCopyrightOf": "Get the option to remove the copyright of",
   "removeCopyrightOf": "Remove the copyright of",
   "buyPremium": "Buy premium",
   "purchased": "Purchased",
-  "disableSourceCopyright": "Disable Onout copyright",
   "reset": "Reset",
   "onoutFeeIsDisabled": "Onout fee is disabled",
   "doNotForgetDisableOnoutFee": "Do not forget to disable onout fee after purchasing premium version",
@@ -312,8 +310,6 @@
   "saveDataForNewDomain": "Save data for a new domain",
   "deleteDataForOldDomain": "Delete data for the old domain",
   "deleteTokenList": "Delete token list",
-  "questionWhyToSwitchToStorageNetwork": "Q: I'm deploying to a non-BSC network, but the app prompts for BSC. Why?",
-  "answerWhyToSwitchToStorageNetwork": "A: The app uses BSC as a makeshift database. After deploying contracts, you must save settings to this storage, which is why you need to use both networks.",
   "descriptionAboutStorageNetworkUsage": "Storage network is used to store application data such as smart contracts, colors, token lists, etc. If you see a request to switch the network, it is most likely necessary to switch to the Storage network so that you can save your data. We do not use centralized servers for security reasons.",
   "ifYouAlreadyHaveFactorySpecifyIt": "If you already have a factory contract use it below to avoid creating a new one"
 }

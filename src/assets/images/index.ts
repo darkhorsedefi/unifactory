@@ -27,9 +27,8 @@ import SHIBARIUM from './shibarium.png'
 import GUAPX from './guapx.png'
 import SCROLL_ETH from './scroll.io.png'
 import Q from './q.png'
-import BLAST from './blast.svg'
-import CORE from './core.png'
-import PDY from './parody-logo.png'
+import AGORA from './agora.png'
+
 
 export const CURRENCY = {
   SCROLL_ETH,
@@ -60,9 +59,7 @@ export const CURRENCY = {
   OP_BNB,
   Q,
   GUAPX,
-  BLAST,
-  CORE,
-  PDY,
+  AGORA,
 
   // ------------
 
@@ -106,7 +103,7 @@ export const CURRENCY = {
   534: CNDL,
   2021: EDG,
 
-  1442: ETH,
+  1442: AGORA,
   1101: ETH,
 
   // Fokawa
@@ -130,10 +127,4 @@ export const CURRENCY = {
   // Q
   35441: Q, // Mainnet
   35443: Q, // Testnet
-
-  81457: BLAST,
-  168587773: BLAST,
-
-  1116: CORE,
-  2078: PDY,
 }

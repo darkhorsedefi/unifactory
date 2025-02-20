@@ -12,7 +12,6 @@ import { TokenLists } from './TokenLists'
 import Accordion from 'components/Accordion'
 import Input from 'components/Input'
 import InputPanel from 'components/InputPanel'
-import Toggle from 'components/Toggle'
 import ListFactory from 'components/ListFactory'
 import MenuLinksFactory, { LinkItem } from 'components/MenuLinksFactory'
 import ColorSelector from 'components/ColorSelector'
@@ -20,9 +19,7 @@ import TextBlock from 'components/TextBlock'
 import NetworkRelatedSettings from './NetworkRelatedSettings'
 import { OptionWrapper } from './index'
 import { STORAGE_NETWORK_ID, STORAGE_NETWORK_NAME, ERROR_CODE } from '../../constants'
-import { Addition, onoutUrl } from '../../constants/onout'
 import { PanelTab } from './'
-import { StyledPurchaseButton, StyledOnoutLink } from './styled'
 import { saveAppData } from 'utils/storage'
 import { parseENSAddress } from 'utils/parseENSAddress'
 import uriToHttp from 'utils/uriToHttp'
@@ -47,7 +44,7 @@ type Props = {
 }
 
 export default function Interface(props: Props) {
-  const { pending, setPending, activeNetworks, setTab, switchToNetwork } = props
+  const { pending, setPending, activeNetworks, switchToNetwork } = props
   const { t } = useTranslation()
   const { library, chainId, account } = useActiveWeb3React()
   const dispatch = useDispatch()
@@ -69,9 +66,7 @@ export default function Interface(props: Props) {
     socialLinks: stateSocialLinks,
     addressesOfTokenLists: stateAddressesOfTokenLists,
     tokenListsByChain: stateTokenListsByChain,
-    disableSourceCopyright: stateDisableSourceCopyright,
     defaultSwapCurrency,
-    additions,
   } = useAppState()
 
   const [projectName, setProjectName] = useState(stateProjectName)
@@ -151,7 +146,6 @@ export default function Interface(props: Props) {
   const [addressesOfTokenLists, setAddressesOfTokenLists] = useState<string[]>(stateAddressesOfTokenLists)
   const [tokenLists, setTokenLists] = useState<any>(stateTokenListsByChain)
 
-  const [disableSourceCopyright, setDisableSourceCopyright] = useState<boolean>(stateDisableSourceCopyright)
   const [swapInputCurrency, setSwapInputCurrency] = useState(defaultSwapCurrency.input || '')
   const [swapOutputCurrency, setSwapOutputCurrency] = useState(defaultSwapCurrency.output || '')
 
@@ -165,7 +159,6 @@ export default function Interface(props: Props) {
     menuLinks: stateMenuLinks,
     socialLinks: stateSocialLinks,
     addressesOfTokenLists: stateAddressesOfTokenLists,
-    disableSourceCopyright: stateDisableSourceCopyright,
     swapInputCurrency: defaultSwapCurrency.input,
     swapOutputCurrency: defaultSwapCurrency.output,
     backgroundColorDark: stateBackgroundColorDark,
@@ -187,7 +180,6 @@ export default function Interface(props: Props) {
       menuLinks,
       socialLinks,
       addressesOfTokenLists,
-      disableSourceCopyright,
       swapInputCurrency,
       swapOutputCurrency,
       backgroundColorDark,
@@ -208,7 +200,6 @@ export default function Interface(props: Props) {
     menuLinks,
     socialLinks,
     addressesOfTokenLists,
-    disableSourceCopyright,
     swapInputCurrency,
     swapOutputCurrency,
     backgroundColorDark,
@@ -260,7 +251,6 @@ export default function Interface(props: Props) {
       menuLinks,
       socialLinks,
       addressesOfTokenLists,
-      disableSourceCopyright,
       defaultSwapCurrency: {
         input: swapInputCurrency,
         output: swapOutputCurrency,
@@ -378,30 +368,6 @@ export default function Interface(props: Props) {
             onChange={setBackgroundUrl}
             error={!isValidBackground}
           />
-        </OptionWrapper>
-
-        <OptionWrapper flex>
-          {additions[Addition.premiumVersion]?.isValid || additions[Addition.switchCopyright]?.isValid ? (
-            <>
-              {t('disableSourceCopyright')}
-              <Toggle
-                isActive={disableSourceCopyright}
-                toggle={() => setDisableSourceCopyright((prevState) => !prevState)}
-              />
-            </>
-          ) : (
-            <>
-              <TextBlock type="notice">
-                {t('getAbilityToRemoveCopyrightOf')}{' '}
-                <StyledOnoutLink href={onoutUrl} target="_blank" rel="noopener noreferrer">
-                  onout.org
-                </StyledOnoutLink>
-                <StyledPurchaseButton onClick={() => setTab(PanelTab.additions)} width="100%" margin="12px 0 0">
-                  {t('purchase')}
-                </StyledPurchaseButton>
-              </TextBlock>
-            </>
-          )}
         </OptionWrapper>
 
         <OptionWrapper>

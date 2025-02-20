@@ -1,10 +1,10 @@
-import { POLYGON_TESTNET_ID, BSC_ID } from './'
+import { GOERLI_ID, BSC_ID } from './'
 
 export const onoutUrl = 'https://onout.org'
 export const originUrl = 'https://noxon.wpmix.net'
-export const onoutFeeAddress = '0xDf50EF7E506536354e7a805442dcBF25c7Ac249B'
+export const onoutFeeAddress = '0xC7a7abBa0f0760b83FE8A2D6CC61FC52d519BE5E'
 
-export const requiredPaymentNetworkId = process.env.NODE_ENV === 'production' ? BSC_ID : POLYGON_TESTNET_ID
+export const requiredPaymentNetworkId = process.env.NODE_ENV === 'production' ? BSC_ID : GOERLI_ID
 
 export enum Addition {
   switchCopyright = 1,

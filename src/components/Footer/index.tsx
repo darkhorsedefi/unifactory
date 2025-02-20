@@ -9,7 +9,6 @@ import { BsQuestionCircle } from 'react-icons/bs'
 import { SiTwitter } from 'react-icons/si'
 import { AiOutlineYoutube } from 'react-icons/ai'
 import { BsFacebook, BsGithub, BsDiscord, BsMedium, BsReddit, BsLinkedin, BsLightningChargeFill } from 'react-icons/bs'
-import Copyright from 'components/Copyright'
 
 const FooterWrapper = styled.div`
   padding: 0.3rem;
@@ -29,7 +28,7 @@ const Content = styled.div`
   justify-content: center;
 `
 
-const StyledCopyright = styled.p<{ pale?: boolean }>`
+const Copyright = styled.p<{ pale?: boolean }>`
   margin: 0 0 0.7rem 0;
   text-align: center;
   ${({ pale }) => (pale ? `opacity: 0.92; font-size: 0.96em;` : '')}
@@ -84,15 +83,14 @@ const returnIconByUri = (uri: string) => {
 }
 
 export default function Footer() {
-  const { projectName, socialLinks, disableSourceCopyright } = useAppState()
+  const { projectName, socialLinks } = useAppState()
   const year = new Date().getFullYear()
   const copyright = `© ${projectName} ${year}`
 
   return (
     <FooterWrapper>
       <Content>
-        {projectName && <StyledCopyright>{copyright}</StyledCopyright>}
-        {!disableSourceCopyright && <StyledCopyright pale>{<Copyright />}</StyledCopyright>}
+        {projectName && <Copyright>{copyright}</Copyright>}
 
         {socialLinks.length ? (
           <SocialLinksWrapper>

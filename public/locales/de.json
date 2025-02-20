@@ -296,12 +296,10 @@
   "confirmPaymentTransaction": "Bestätigen Sie die Zahlungstransaktion",
   "saveYourAdditionKey": "Speichern Sie Ihren Add-On-Schlüssel",
   "buy": "Kaufen",
-  "noticeAboutOnoutFee": "Bitte beachten Sie, dass ein {{onoutFee}} onout.org die Gebühr wird von der Verwaltungsgebühr abgezogen (du wirst bekommen {{adminFee}}). Sie können jedoch eine Premium-Version erwerben, um die onout.org Gebühr zu deaktivieren.",
   "getAbilityToRemoveCopyrightOf": "Holen Sie sich die Option, das Copyright von zu entfernen",
   "removeCopyrightOf": "Entfernen Sie das Urheberrecht von",
   "buyPremium": "Premium kaufen",
   "purchased": "Kaufen",
-  "disableSourceCopyright": "Deaktivieren Onout urheberrechte",
   "reset": "Zurücksetzen",
   "onoutFeeIsDisabled": "Onout feed ist deaktiviert",
   "doNotForgetDisableOnoutFee": "Vergiss nicht zu deaktivieren onout gebühr nach dem Kauf der Premium-Version",
@@ -313,8 +311,6 @@
   "saveDataForNewDomain": "Daten für eine neue Domäne speichern",
   "deleteDataForOldDomain": "Daten für die alte Domäne löschen",
   "deleteTokenList": "Token-Liste löschen",
-  "questionWhyToSwitchToStorageNetwork": "Q: Ich implementiere in ein Nicht-BSC-Netzwerk, aber die App fordert BSC an. Warum?",
-  "answerWhyToSwitchToStorageNetwork": "A: Die App verwendet BSC als provisorische Datenbank. Nach dem Implementieren von Verträgen müssen Sie Einstellungen in diesem Speicher speichern, weshalb Sie beide Netzwerke verwenden müssen.",
   "descriptionAboutStorageNetworkUsage": "Das Speichernetzwerk wird verwendet, um Anwendungsdaten wie Smart Contracts, Farben, Token-Listen usw. zu speichern. Wenn Sie eine Aufforderung sehen, das Netzwerk zu wechseln, ist es höchstwahrscheinlich notwendig, zum Speichernetzwerk zu wechseln, damit Sie Ihre Daten speichern können. Wir verwenden aus Sicherheitsgründen keine zentralisierten Server.",
   "ifYouAlreadyHaveFactorySpecifyIt": "Wenn Sie bereits über einen Fabrikvertrag verfügen, verwenden Sie diesen unten, um die Erstellung eines neuen zu vermeiden"
 }

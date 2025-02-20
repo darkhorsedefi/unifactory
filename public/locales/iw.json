@@ -288,12 +288,10 @@
   "confirmPaymentTransaction": "אשר את עסקת התשלום",
   "saveYourAdditionKey": "שמור את מקש ההרחבה שלך",
   "buy": "לקנות",
-  "noticeAboutOnoutFee": "שימו לב ש {{onoutFee}} onout.org העמלה תנוכה מעמלת המנהל (תקבל {{adminFee}}). עם זאת, אתה יכול לרכוש גרסת פרימיום כדי להשבית את onout.org חינם.",
   "getAbilityToRemoveCopyrightOf": "קבל את האפשרות להסיר את זכויות היוצרים של",
   "removeCopyrightOf": "הסר את זכויות היוצרים של",
   "buyPremium": "לקנות פרימיום",
   "purchased": "רכש",
-  "disableSourceCopyright": "השבת Onout זכויות יוצרים",
   "reset": "איפוס",
   "onoutFeeIsDisabled": "Onout הזנה מושבתת",
   "doNotForgetDisableOnoutFee": "אל תשכח להשבית onout דמי לאחר רכישת גרסת פרימיום",
@@ -305,8 +303,6 @@
   "saveDataForNewDomain": "שמור נתונים עבור דומיין חדש",
   "deleteDataForOldDomain": "מחק נתונים עבור הדומיין הישן",
   "deleteTokenList": "מחק רשימת אסימונים",
-  "questionWhyToSwitchToStorageNetwork": "ש: אני מבצע התקנה על רשת שאיננה BSC, אך האפליקציה מבקשת את BSC. למה?",
-  "answerWhyToSwitchToStorageNetwork": "ת: האפליקציה משתמשת ב-BSC כבסיס נתונים זמני. לאחר התקנת החוזים, עליך לשמור הגדרות באחסון הזה, ולכן אתה צריך להשתמש בשתי הרשתות.",
   "descriptionAboutStorageNetworkUsage": "רשת אחסון משמשת לאחסון נתוני יישומים כגון חוזים חכמים, צבעים, רשימות אסימונים וכו'. אם אתה רואה בקשה להחליף את הרשת, סביר להניח שיש צורך לעבור לרשת האחסון כדי שתוכל לשמור את הנתונים שלך. איננו משתמשים בשרתים מרכזיים מטעמי אבטחה.",
   "ifYouAlreadyHaveFactorySpecifyIt": "אם כבר יש לך חוזה יצרן, השתמש בו למטה כדי להימנע מיצירת חוזה חדש"
 }

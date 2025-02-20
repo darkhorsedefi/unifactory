@@ -29,8 +29,7 @@ import { PartitionWrapper } from './index'
 import { isValidAddress, setFactoryOption, deploySwapContracts } from 'utils/contract'
 import { saveAppData } from 'utils/storage'
 import useWordpressInfo from 'hooks/useWordpressInfo'
-import { PanelTab } from './'
-import { StyledPurchaseButton, List, NumList } from './styled'
+import { List, NumList } from './styled'
 
 const Title = styled.h3`
   font-weight: 400;
@@ -134,7 +133,7 @@ const setValidValue = ({
 }
 
 function SwapContracts(props: any) {
-  const { domain, pending, setPending, theme, wrappedToken, setTab, switchToNetwork } = props
+  const { domain, pending, setPending, theme, wrappedToken } = props
   const { t } = useTranslation()
   const dispatch = useDispatch()
   const { library, account, chainId } = useActiveWeb3React()
@@ -500,22 +499,11 @@ function SwapContracts(props: any) {
         <InputWrapper>
           <InputPanel label="Router *" value={userRouter} onChange={setUserRouter} />
         </InputWrapper>
-        {chainId === STORAGE_NETWORK_ID ? (
-          <Button onClick={saveSwapContracts} disabled={pending || !canSaveSwapContracts}>
-            {t('saveSwapContracts')}
-          </Button>
-        ) : (
-          <>
-            <Button onClick={() => switchToNetwork(STORAGE_NETWORK_ID)} disabled={pending}>
-              {t('switchToNetwork', {
-                network: STORAGE_NETWORK_NAME,
-              })}
-            </Button>
-            <TextBlock type="notice">
-              {t('questionWhyToSwitchToStorageNetwork')} {t('answerWhyToSwitchToStorageNetwork')}
-            </TextBlock>
-          </>
-        )}
+        <Button onClick={saveSwapContracts} disabled={pending || !canSaveSwapContracts}>
+          {t(chainId === STORAGE_NETWORK_ID ? 'saveSwapContracts' : 'switchToNetwork', {
+            network: STORAGE_NETWORK_NAME,
+          })}
+        </Button>
       </PartitionWrapper>
 
       <PartitionWrapper>
@@ -557,15 +545,6 @@ function SwapContracts(props: any) {
               </OptionWrapper>
             ) : (
               <>
-                <TextBlock type="notice">
-                  {t('noticeAboutOnoutFee', {
-                    onoutFee: '20%',
-                    adminFee: '80%',
-                  })}
-                  <StyledPurchaseButton onClick={() => setTab(PanelTab.additions)} width="100%" margin="12px 0 0">
-                    {t('purchase')}
-                  </StyledPurchaseButton>
-                </TextBlock>
               </>
             )}
 
